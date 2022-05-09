@@ -1,11 +1,12 @@
 import React from 'react';
 import './app.css';
-// import Habit from './components/habit';
-import Props from './components/props';
+import Habits from './components/habits';
 
 function App(){
   return (
-  <Props />
+  <React.StrictMode>
+    <Habits />
+  </React.StrictMode>
   )
 }
 
