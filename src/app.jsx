@@ -1,18 +1,12 @@
 import React from 'react';
+import './app.css';
+// import Habit from './components/habit';
+import Props from './components/props';
 
 function App(){
-  const name = 'inji'
   return (
-    <React.Fragment>
-      <h1>Hello! {name}</h1>
-      <h1>😊:)</h1>
-      {name && <h1>Hi</h1>}
-      {
-        ['🛺', '🏆'].map(item => (
-          <h1>{item}</h1>
-        ))}
-    </React.Fragment>
-    )
+  <Props />
+  )
 }
 
 export default App;
