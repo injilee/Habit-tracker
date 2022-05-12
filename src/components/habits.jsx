@@ -11,15 +11,15 @@ export default class Habits extends Component {
     }
 
     handleIncrement = habit => {
-        console.log(`handle : ${habit.name}`);
+        
     }
 
     handleDecrement = habit => {
-        console.log(`handle : ${habit.name}`);
+        
     }
 
     handleDelete = habit => {
-        console.log(`handle : ${habit.name}`);
+        
     }
 
     render() {
