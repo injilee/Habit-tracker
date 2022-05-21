@@ -10,6 +10,26 @@ button {
   list-style:none;
 }
 
+nav{
+  display:flex;
+  align-items:center;
+  padding:1.5em 1.5em;
+  background-color: rgb(255, 238, 217);
+}
+
+.fa-leaf{
+  font-size:1.7rem;
+  color: green;
+  margin-right:10px;
+}
+
+.habit-tracker{
+  font-size:1.5rem;
+  font-weight:500;
+  margin:0 5px 0;
+}
+
+.habit-tracker-count, 
 .habit-count{
   display:inline-block;
   text-align:center;
@@ -21,7 +41,16 @@ button {
   margin-right:0.4em;
   border-radius:50%;
   color:#fff;
-  background-color:lightcoral;
+  background-color:rgb(67, 154, 67);
+}
+
+.habit-tracker-count{
+  background-color:rgb(40, 104, 40);
+}
+
+.habit-input{
+  margin:15px 5px;
+  font-size:1.3rem;
 }
 
 .habit-button{
@@ -33,6 +62,23 @@ button {
 .habit-button:hover{
   opacity:0.7;
 }
+
+.add-btn,
+.reset-btn{
+  font-size:1.3rem;
+  font-weight:500;
+  color:#fff;
+  background-color: rgb(40, 104, 40);
+}
+.reset-btn{
+  margin-left:5px;
+}
+
+.add-btn:hover,
+.reset-btn:hover{
+  opacity:0.7;
+}
+
 
 .habit-increase,
 .habit-decrease {

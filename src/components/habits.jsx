@@ -12,11 +12,10 @@ export default class Habits extends Component {
 
     handleIncrement = habit => {
         const habits = [...this.state.habits];
-        // 각각의 habits index. 그래야 각각 계산된다.
         const index = habits.indexOf(habit);
-        // index value
         habits[index].count++;
-        this.setState({habits : habits});
+        this.setState({ habits });
+        // console.log(this.state.habits);
     }
 
     handleDecrement = habit => {
@@ -24,12 +23,18 @@ export default class Habits extends Component {
         const index = habits.indexOf(habit);
         const count = habits[index].count - 1;
         habits[index].count = count < 0 ? 0 : count;
-        this.setState({habits});
+        this.setState({ habits });
     }
 
     handleDelete = habit => {
-        const habits = this.state.habits.filter(item => item.id !== habit.id);
-        this.setState({habits});
+        // splice
+        // const habits = [...this.state.habits];
+        // const index = habits.indexOf(habit);
+        // habits.splice(index, 1);
+
+        // filter
+        const habits = this.state.habits.filter((item) => item.id !== habit.id);
+        this.setState({ habits });
     }
 
     render() {
