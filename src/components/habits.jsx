@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
 import Habit from './habit'
+import NavBar from './navBar'
 
 export default class Habits extends Component {
     state = {
         habits : [
             { id:1, name: 'Reading', count: 0},
             { id:2, name: 'Running', count: 0},
-            { id:3, name: 'Codinng', count: 0}
+            { id:3, name: 'Coding', count: 0}
         ]
     }
 
@@ -37,19 +38,51 @@ export default class Habits extends Component {
         this.setState({ habits });
     }
 
+    // inputName = e => {
+    //     const text = e.target.value;
+    //     const habit = {
+    //         id : 4,
+    //         name : text,
+    //         count : 0
+    //     }
+    //     console.log(habit);
+    // }
+
+    // handleAdd = e => {
+    //     const habits = [...this.state.habits];
+    //     this.setState({ habits });
+    // }
+
+    handleReset = () => {
+        const habits = [];
+        this.setState({ habits });
+    }
+
+    // countChage = () => {
+    //     const totalCount = this.state.habits.filter(item => item.count > 0).length;
+    // }
+
+
     render() {
         return (
-            <ul>
-                {this.state.habits.map(habits => (
-                <Habit 
-                key={habits.id}
-                habits={habits}
-                onIncrement={this.handleIncrement}
-                onDecrement={this.handleDecrement}
-                onDelete={this.handleDelete}
-                />
-            ))}
-            </ul>
+            <>
+                <NavBar totalCount={this.state.habits.filter(item => item.count > 0).length} />
+                <input type="text" className='habit-input' placeholder='Habit'/>
+                <button className='add-btn'>Add</button>
+
+                <ul>
+                    {this.state.habits.map(habits => (
+                    <Habit 
+                    key={habits.id}
+                    habits={habits}
+                    onIncrement={this.handleIncrement}
+                    onDecrement={this.handleDecrement}
+                    onDelete={this.handleDelete}
+                    />
+                ))}
+                </ul>
+                <button className='reset-btn' onClick={this.handleReset}>Reset All</button>
+            </>
         )
     }
 }
