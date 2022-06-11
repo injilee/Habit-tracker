@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Habit from './habit'
+import HabitAddForm from './habitAddForm'
 import NavBar from './navBar'
 
 export default class Habits extends Component {
@@ -38,37 +39,22 @@ export default class Habits extends Component {
         this.setState({ habits });
     }
 
-    // inputName = e => {
-    //     const text = e.target.value;
-    //     const habit = {
-    //         id : 4,
-    //         name : text,
-    //         count : 0
-    //     }
-    //     console.log(habit);
-    // }
-
-    // handleAdd = e => {
-    //     const habits = [...this.state.habits];
-    //     this.setState({ habits });
-    // }
-
     handleReset = () => {
         const habits = [];
         this.setState({ habits });
     }
 
-    // countChage = () => {
-    //     const totalCount = this.state.habits.filter(item => item.count > 0).length;
-    // }
-
+    handleAdd = habitName => {
+        const habits = [...this.state.habits,{id: Date.now(), name: habitName, count: 0} ];
+        this.setState({ habits });
+        console.log(habits);
+    }
 
     render() {
         return (
             <>
                 <NavBar totalCount={this.state.habits.filter(item => item.count > 0).length} />
-                <input type="text" className='habit-input' placeholder='Habit'/>
-                <button className='add-btn'>Add</button>
+                <HabitAddForm onAdd={this.handleAdd}/>
 
                 <ul>
                     {this.state.habits.map(habits => (
