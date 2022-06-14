@@ -39,13 +39,16 @@ export default class Habits extends Component {
         this.setState({ habits });
     }
 
-    handleReset = () => {
-        const habits = [];
+    handleAdd = habitName => {
+        const habits = [...this.state.habits,{id: Date.now(), name: habitName, count: 0} ];
         this.setState({ habits });
     }
 
-    handleAdd = habitName => {
-        const habits = [...this.state.habits,{id: Date.now(), name: habitName, count: 0} ];
+    handleReset = () => {
+        const habits = this.state.habits.map(habit => {
+            habit.count = 0
+            return habit;
+        });
         this.setState({ habits });
         console.log(habits);
     }
