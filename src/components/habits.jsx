@@ -45,7 +45,7 @@ export default class Habits extends Component {
     }
 
     handleReset = () => {
-        const habits = this.state.habits.map(habit => {
+        const habits = this.state.habits.map((habit) => {
             habit.count = 0
             return habit;
         });
@@ -55,7 +55,7 @@ export default class Habits extends Component {
 
     render() {
         return (
-            <>
+            <div className='habits'>
                 <NavBar totalCount={this.state.habits.filter(item => item.count > 0).length} />
                 <HabitAddForm onAdd={this.handleAdd}/>
 
@@ -71,7 +71,7 @@ export default class Habits extends Component {
                 ))}
                 </ul>
                 <button className='reset-btn' onClick={this.handleReset}>Reset All</button>
-            </>
+            </div>
         )
     }
 }
