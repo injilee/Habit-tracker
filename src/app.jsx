@@ -20,15 +20,15 @@ export default class App extends Component{
           return item;
         })
         this.setState({ habits });
-        console.log('state.habits 얕은 복사로 habits에 할당하여 ref는 다르게 나온다.')
-        console.log(habit);
-        console.log(this.state.habits);
-        console.log(habit === this.state.habits);
-        console.log('----------------------')
-        console.log('habits는 ref가 달라 false지만 그 item들의 ref는 같기 때문에 true이다.')
-        console.log(habit);
-        console.log(this.state.habits[0]);
-        console.log(habit === this.state.habits[0]);
+        // console.log('state.habits 얕은 복사로 habits에 할당하여 ref는 다르게 나온다.')
+        // console.log(habit);
+        // console.log(this.state.habits);
+        // console.log(habit === this.state.habits);
+        // console.log('----------------------')
+        // console.log('habits는 ref가 달라 false지만 그 item들의 ref는 같기 때문에 true이다.')
+        // console.log(habit);
+        // console.log(this.state.habits[0]);
+        // console.log(habit === this.state.habits[0]);
     }
 
     handleDecrement = habit => {
@@ -37,6 +37,10 @@ export default class App extends Component{
             const count = habit.count - 1;
             return { ...habit, count : count < 0 ? 0 : count};
           }
+          console.log(item);
+          console.log(item === this.state.habits[0]);
+          console.log({item});
+          console.log({item} === this.state.habits[0]);
           return item;
         })
         this.setState({ habits });
