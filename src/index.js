@@ -1,15 +1,13 @@
 import React, { StrictMode } from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-// import App from './app';
-import SimpleHabit from './components/simpleHabit';
+import App from './app';
 import '@fortawesome/fontawesome-free/js/all.js';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    // <App />
-    <StrictMode>
-        <SimpleHabit />
-    </StrictMode>
+  // <App />
+  <StrictMode>
+    <App />
+  </StrictMode>,
 );
-
