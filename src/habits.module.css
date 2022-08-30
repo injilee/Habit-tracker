@@ -1,0 +1,13 @@
+.resetBtn {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #fff;
+  background-color: rgb(40, 104, 40);
+}
+.resetBtn {
+  margin-left: 5px;
+}
+
+.resetBtn:hover {
+  opacity: 0.7;
+}

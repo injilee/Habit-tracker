@@ -1,0 +1,15 @@
+.addBtn {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #fff;
+  background-color: rgb(40, 104, 40);
+}
+
+.addBtn:hover {
+  opacity: 0.7;
+}
+
+.addInput {
+  margin: 15px 5px;
+  font-size: 1.3rem;
+}

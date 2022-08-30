@@ -1,0 +1,30 @@
+nav {
+  display: flex;
+  align-items: center;
+  padding: 1.5em 1.5em;
+  background-color: rgb(255, 238, 217);
+}
+
+.habit-tracker {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin: 0 5px 0;
+}
+
+.habit-tracker-count {
+  display: inline-block;
+  text-align: center;
+  font-size: 1.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  margin-left: 0.2em;
+  margin-right: 0.4em;
+  border-radius: 50%;
+  color: #fff;
+  background-color: rgb(67, 154, 67);
+}
+
+.habit-tracker-count {
+  background-color: rgb(40, 104, 40);
+}
